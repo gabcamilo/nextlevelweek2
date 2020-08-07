@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 import './styles.css'
 
@@ -7,6 +8,7 @@ import landingImg from '../../assets/images/landing.svg'
 import studyIcon from '../../assets/images/icons/study.svg'
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg'
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
+
 
 function Landing(){
 	return(
@@ -23,14 +25,14 @@ function Landing(){
 					alt="Study Platform"
 				/>
 				<div className="buttons-container">
-					<a href="" className="study">
+					<Link to="/study" className="study">
 						<img src={studyIcon} alt="Study"/>
 						Study
-					</a>
-					<a href="" className="give-classes">
-						<img src={giveClassesIcon} alt="Study"/>
+					</Link>
+					<Link to="/give-classes" className="give-classes">
+						<img src={giveClassesIcon} alt="Give Classes"/>
 						Give Classes
-					</a>
+					</Link>
 				</div>
 
 				<span className="total-connections">
