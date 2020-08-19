@@ -1,3 +1,7 @@
+.input-block {
+  position: relative;
+}
+
 .input-block label{
 	font-size: 1.4rem;
 }
