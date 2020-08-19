@@ -1,11 +1,13 @@
 import React from 'react';
 
 import PageHeader from '../../components/PageHeader'
+import Input from '../../components/Input';
+import TextArea from '../../components/TextArea';
+import Select from '../../components/Select';
 
 import warningIcon from '../../assets/images/icons/warning.svg'
 
 import './styles.css'
-import Input from '../../components/Input';
 
 function TeacherForm () {
 	return(
@@ -21,14 +23,23 @@ function TeacherForm () {
 				<Input name="name" label="Full name"/>
 				<Input name="avatar" label="Avatar"/>
 				<Input name="whatsapp" label="WhatsApp"/>
+				<TextArea name="biography" label="Biography"/>
 			</fieldset>
 
 			<fieldset>
 				<legend>About the class</legend>
-
-				<Input name="subject" label="Subject"/>
-				<Input name="avatar" label="Avatar"/>
-				<Input name="whatsapp" label="WhatsApp"/>
+				<Select
+					name="subject"
+					label="Subject"
+					options={[
+						{value: 'Arts', label: 'Arts'},
+						{value: 'Philosophy', label: 'Philosophy'},
+						{value: 'Math', label: 'Math'},
+						{value: 'English', label: 'English'},
+						{value: 'Chemistry', label: 'Chemistry'},
+					]}
+				/>
+				<Input name="cost" label="Price"/>
 			</fieldset>
 
 		<footer>
